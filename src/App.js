@@ -1,4 +1,4 @@
-import "./App.less";
+import './App.less';
 
 function App() {
   return <div className="App">Hello World!</div>;
