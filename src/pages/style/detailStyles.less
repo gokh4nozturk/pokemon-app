@@ -1,6 +1,6 @@
 .detail-container {
   display: grid;
-  grid-template-rows: 310px 100px 1fr;
+  grid-template-rows: 400px 100px 1fr;
   color: #363636;
 }
 
@@ -12,18 +12,20 @@
   figure {
     grid-column: 1/2;
     display: grid;
-    place-items: center;
+    justify-content: end;
 
     img {
-      width: 60%;
+      width: 370px;
     }
   }
   .detail-name {
     grid-column: 2/3;
     display: grid;
-    place-items: center;
+    justify-content: start;
+    align-items: center;
     font-size: 1.3em;
     font-weight: 500;
+    padding: 0 150px;
 
     h1 {
       text-transform: uppercase;
