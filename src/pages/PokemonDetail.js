@@ -45,10 +45,10 @@ const PokemonDetail = () => {
             <div>
               <h1>{detail.name}</h1>
               <span className="poke-weight weight-height">Weight:</span>
-              <span> {pokeWeight} kg</span>
+              <span> {pokeWeight} gr</span>
               <br />
               <span className="poke-height weight-height">Height:</span>
-              <span> {pokeHeight} m</span>
+              <span> {pokeHeight} cm</span>
             </div>
           </div>
         </div>
