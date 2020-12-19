@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import Axios from 'axios';
+import { useTitle } from 'react-use';
 import Pokemon from '../components/pokemon';
 import Layout from '../components/layout';
-import { useTitle } from 'react-use';
 
 import './style/pokemonsStyles.less';
 

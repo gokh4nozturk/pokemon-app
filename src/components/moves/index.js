@@ -1,5 +1,5 @@
-import Axios from 'axios';
 import React, { useCallback, useState, useEffect } from 'react';
+import Axios from 'axios';
 import Move from './Move';
 
 import './styles/movesStyle.less';

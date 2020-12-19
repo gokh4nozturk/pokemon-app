@@ -1,6 +1,6 @@
-import Axios from 'axios';
 import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Axios from 'axios';
 
 import './pokemonStyle.less';
 
@@ -24,12 +24,8 @@ const Pokemon = ({ url, name, onFavorite, onUnfavorite, isFavorite }) => {
   return (
     <div className="pokemon-card">
       <Link to={`/${id}`}>
-        <div>
-          <figure>{pokeImg && <img src={pokeImg} alt={name} />}</figure>
-        </div>
-        <div>
-          <p> {name} </p>
-        </div>
+        <figure>{pokeImg && <img src={pokeImg} alt={name} />}</figure>
+        <p> {name} </p>
       </Link>
       <div>
         {!isFavorite ? (

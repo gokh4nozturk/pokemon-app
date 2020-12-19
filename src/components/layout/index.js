@@ -12,7 +12,7 @@ const Layout = ({ title, children }) => (
     </nav>
     <main>{children}</main>
     <footer>
-      <a className="layout-links" href="https://pokeapi.co/" target="blank">
+      <a href="https://pokeapi.co/" target="blank">
         PokeApi
       </a>
     </footer>
