@@ -10,12 +10,10 @@ import './style/detailStyles.less';
 
 const PokemonDetail = () => {
   const { id } = useParams();
-  const [detail, setDetail] = useState([]);
-  const [pokeImg, setPokeImg] = useState([]);
+  const [detail, setDetail] = useState({});
   const [pokeMoves, setPokeMoves] = useState([]);
-  const [pokeWeight, setPokeWeight] = useState('');
-  const [pokeHeight, setPokeHeight] = useState('');
-  const [pokeName, setPokeName] = useState('');
+  const [pokeImg, setPokeImg] = useState(''); // for can not access in detail
+  const [pokeName, setPokeName] = useState(''); // for title
 
   useTitle(pokeName.toUpperCase());
 
@@ -23,12 +21,11 @@ const PokemonDetail = () => {
     const data = await Axios.get(
       `https://pokeapi.co/api/v2/pokemon/${id}`
     ).then((res) => res.data);
-    setPokeName(data.name);
-    setPokeHeight(data.height);
-    setPokeWeight(data.weight);
+
     setPokeMoves(data.moves);
-    setPokeImg(data.sprites.front_default);
     setDetail(data);
+    setPokeImg(data.sprites.front_default);
+    setPokeName(data.name);
   }, [id]);
 
   useEffect(() => {
@@ -45,23 +42,19 @@ const PokemonDetail = () => {
           <div className="detail-name">
             <div>
               <h1>{detail.name}</h1>
-              <span className="poke-weight weight-height">Weight:</span>
-              <span> {pokeWeight} gr</span>
+              <span className="weight-height">Weight:</span>
+              <span> {detail.weight} gr</span>
               <br />
-              <span className="poke-height weight-height">Height:</span>
-              <span> {pokeHeight} cm</span>
+              <span className="weight-height">Height:</span>
+              <span> {detail.height} cm</span>
             </div>
           </div>
         </div>
-        <div>
-          <div className="moves-title">
-            <h1>MOVES</h1>
-          </div>
-          <div className="moves-wrapper">
-            {pokeMoves.map((move) => {
-              return <Moves key={uniqid()} {...move} />;
-            })}
-          </div>
+        <h1>MOVES</h1>
+        <div className="moves-wrapper">
+          {pokeMoves.map((move) => {
+            return <Moves key={uniqid()} {...move} />;
+          })}
         </div>
       </div>
     </Layout>

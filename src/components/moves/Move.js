@@ -10,12 +10,12 @@ const Move = ({ accuracy, power, pp, type }) => {
   return (
     <div className="move-wrapper">
       <div>
-        <span className="move-titles">Power: </span>
-        <span className="move-titles-value"> {myPower}</span>
+        Power:
+        <span> {myPower}</span>
       </div>
       <div>
-        <span className="move-titles">Acc: </span>
-        <span className="move-titles-value"> {myAccuracy} %</span>
+        Acc:
+        <span> {myAccuracy} %</span>
       </div>
       <div className="progress-bar">
         <div
@@ -25,11 +25,11 @@ const Move = ({ accuracy, power, pp, type }) => {
         ></div>
       </div>
       <div>
-        <span className="move-titles">PP: </span>
-        <span className="move-titles-value"> {myPp}</span>
+        PP:
+        <span> {myPp}</span>
       </div>
       <div className="move-type-container">
-        <span className="move-titles-value move-type">{type}</span>
+        <span>{type}</span>
       </div>
     </div>
   );

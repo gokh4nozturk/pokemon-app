@@ -1,36 +1,42 @@
 .move-wrapper {
   width: 100%;
+
+  div {
+    line-height: 1.7em;
+    font-size: 1.3em;
+    font-weight: 400;
+  }
+
+  span {
+    font-size: 1.1rem;
+  }
 }
 
 .progress-bar {
+  background: #959396;
+  width: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+
   div {
-    border-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     background-color: #00d1b2;
     height: 15px;
   }
 }
 
-.move-titles {
-  line-height: 1.7em;
-  font-size: 1.3em;
-  font-weight: 400;
-}
-
-.move-titles-value {
-  font-size: 1.1em;
-}
-
 .move-type-container {
   display: grid;
   place-items: center;
-}
 
-.move-type {
-  display: grid;
-  place-items: center;
-  padding: 3px 6px;
-  background-color: #959396;
-  color: #ffffff;
-  border-radius: 12px;
-  text-transform: uppercase;
+  span {
+    display: grid;
+    place-items: center;
+    padding: 3px 6px;
+    background-color: #959396;
+    color: #ffffff;
+    border-radius: 12px;
+    text-transform: uppercase;
+  }
 }

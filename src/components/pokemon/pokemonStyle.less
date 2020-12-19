@@ -1,32 +1,52 @@
 .pokemon-card {
   display: flex;
-  height: 200px;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 2px;
+  border-radius: 5px;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.09);
+  padding: 16px;
+
+  img {
+    height: 150px;
+  }
 
   p {
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
     color: #3273dc;
-  }
 
-  p:hover {
-    color: black;
+    &:hover {
+      color: black;
+    }
   }
 
   .ability {
     display: flex;
     background-color: aqua;
     color: black;
-    margin: auto 5px;
-    padding: 2px 5px;
+    margin: auto 4px;
+    padding: 4px 8px;
     border-radius: 12px;
   }
-}
 
-.link {
-  text-decoration: none;
+  a {
+    text-decoration: none;
+  }
+
+  button {
+    padding: 8px;
+    border-color: transparent;
+    color: aliceblue;
+    border-radius: 4px;
+
+    &.add-favorite {
+      background: #00b89c;
+    }
+
+    &.remove-favorite {
+      background: red;
+    }
+  }
 }

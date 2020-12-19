@@ -1,14 +1,13 @@
 import Axios from 'axios';
 import React, { useCallback, useState, useEffect } from 'react';
 import Move from './Move';
-import uniqid from 'uniqid';
 
 import './styles/movesStyle.less';
 
-const Moves = ({ move, version_group_details }) => {
-  const [moveDetail, setMoveDetail] = useState([]);
+const Moves = ({ move }) => {
+  const [moveDetail, setMoveDetail] = useState({});
   const [moveType, setMoveType] = useState();
-  const id = move.url.split('/').slice(-2, -1);
+  const id = move.url.split('/').slice(-2, -1)[0];
 
   const fetchMove = useCallback(async () => {
     const data = await Axios.get(`https://pokeapi.co/api/v2/move/${id}`).then(
@@ -21,10 +20,11 @@ const Moves = ({ move, version_group_details }) => {
   useEffect(() => {
     fetchMove();
   }, []);
+
   return (
     <div className="moves-container">
-      <p>{move.name}</p>
-      <Move key={uniqid()} {...moveDetail} type={moveType} />
+      <p>{moveDetail.name}</p>
+      <Move key={moveDetail.id} {...moveDetail} type={moveType} />
     </div>
   );
 };
