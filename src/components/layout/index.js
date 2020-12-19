@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './stylesLayout.less';
 
-const Layout = ({ children }) => {
+const Layout = ({ title, children }) => {
   return (
     <div>
       <nav className="layout-nav">
