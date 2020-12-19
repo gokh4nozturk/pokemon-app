@@ -13,9 +13,9 @@ const Layout = ({ title, children }) => {
       </nav>
       <main className="main-wrapper">{children}</main>
       <footer className="layout-footer">
-        <Link className="layout-links" to="https://pokeapi.co/">
+        <a className="layout-links" href="https://pokeapi.co/" target="blank">
           PokeApi
-        </Link>
+        </a>
       </footer>
     </div>
   );
