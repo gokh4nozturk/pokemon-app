@@ -22,7 +22,9 @@ const Move = ({ accuracy, power, pp, type }) => {
           style={{
             width: `${myAccuracy}%`
           }}
-        ></div>
+        >
+          {myAccuracy}%
+        </div>
       </div>
       <div>
         PP:
