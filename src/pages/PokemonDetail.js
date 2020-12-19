@@ -53,10 +53,15 @@ const PokemonDetail = () => {
             </div>
           </div>
         </div>
-        <div className="moves-wrapper">
-          {pokeMoves.map((move) => {
-            return <Moves key={uniqid()} {...move} />;
-          })}
+        <div>
+          <div className="moves-title">
+            <h1>MOVES</h1>
+          </div>
+          <div className="moves-wrapper">
+            {pokeMoves.map((move) => {
+              return <Moves key={uniqid()} {...move} />;
+            })}
+          </div>
         </div>
       </div>
     </Layout>
