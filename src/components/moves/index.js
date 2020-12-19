@@ -1,6 +1,7 @@
 import Axios from 'axios';
 import React, { useCallback, useState, useEffect } from 'react';
 import Move from './Move';
+import uniqid from 'uniqid';
 
 import './styles/movesStyle.less';
 
@@ -23,7 +24,7 @@ const Moves = ({ move, version_group_details }) => {
   return (
     <div className="moves-container">
       <p>{move.name}</p>
-      <Move {...moveDetail} type={moveType} />
+      <Move key={uniqid()} {...moveDetail} type={moveType} />
     </div>
   );
 };

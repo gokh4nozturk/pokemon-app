@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import Moves from '../components/moves';
 import Layout from '../components/layout';
 import { useTitle } from 'react-use';
+import uniqid from 'uniqid';
 
 import './style/detailStyles.less';
 
@@ -54,7 +55,7 @@ const PokemonDetail = () => {
         </div>
         <div className="moves-wrapper">
           {pokeMoves.map((move) => {
-            return <Moves key={id} {...move} />;
+            return <Moves key={uniqid()} {...move} />;
           })}
         </div>
       </div>

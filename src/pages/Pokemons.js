@@ -3,6 +3,7 @@ import Axios from 'axios';
 import Pokemon from '../components/pokemon';
 import Layout from '../components/layout';
 import { useTitle } from 'react-use';
+import uniqid from 'uniqid';
 
 import './style/pokemonsStyles.less';
 
@@ -33,7 +34,7 @@ const Pokemons = () => {
     <Layout>
       <div className="pokemons-container">
         {pokemons.map((pokemon) => {
-          return <Pokemon {...pokemon} />;
+          return <Pokemon key={uniqid()} {...pokemon} />;
         })}
       </div>
       <div className="pagination">
