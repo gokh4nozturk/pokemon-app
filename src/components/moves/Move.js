@@ -28,9 +28,8 @@ const Move = ({ accuracy, power, pp, type }) => {
         <span className="move-titles">PP: </span>
         <span className="move-titles-value"> {myPp}</span>
       </div>
-      <div>
-        <span className="move-titles">Type: </span>
-        <span className="move-titles-value">{type}</span>
+      <div className="move-type-container">
+        <span className="move-titles-value move-type">{type}</span>
       </div>
     </div>
   );
