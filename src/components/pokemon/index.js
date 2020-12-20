@@ -23,7 +23,7 @@ const Pokemon = ({ url, name, onFavorite, onUnfavorite, isFavorite }) => {
 
   return (
     <div className="pokemon-card">
-      <Link to={`/${id}`}>
+      <Link to={`/pokemon/${id}`}>
         <figure>{pokeImg && <img src={pokeImg} alt={name} />}</figure>
         <p> {name} </p>
       </Link>
